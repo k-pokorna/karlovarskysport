@@ -1,0 +1,29 @@
+$primary-color: #ffffff;        //bílá
+$secondary-color: #9f9f9f;      //šedá
+$brand-color1: #264598;         //tmavě modrá
+$brand-color2: #be1d2c;         //červená
+$grant-color: #ffff73;          //žlutá
+$text-color: #5d5f5f;           //tmavě šedá
+$link-color: #001cff;           //barva odkazu
+$button-link-color: #011632;    // barva odkazu tlačítka
+$link-dark-background: #d79b19; //odkaz na tmavém pozadí
+$link-light-color: #f6f626;     //světle žlutá
+$link-hover-color: #cf0303;     //barva odkazů při hover, focus, active
+
+// Pozadí pro stránku s dotacemi
+$grants-background: #327ab6;
+
+// Gradient - pozadí pro body
+$body-color: linear-gradient(90deg, #4C4E4E 0%, #FFFFFF 50%, #4C4E4E 100%);
+
+// Gradienty - barevné přechody pro buttony a karty
+$button-color: linear-gradient(0deg, #ffa937 0%, #fffd90 100%);
+$button-color-darken: linear-gradient(0deg, #ff9812 0%, #fffd90 100%);
+
+// Gradienty - barevné přechody pro položky menu
+$menu-color: linear-gradient(0deg, #327ab6 0%, #1896c8 100%);
+$menu-color-darken: linear-gradient(0deg, #0b3f92 0%, #1896c8 100%);
+
+// grants - deadline color (příjem vs. konec příjmu žádostí)
+$grant-color-opened: #4adb4a;
+$grant-color-closed: #ff0000;

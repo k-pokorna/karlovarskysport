@@ -1,0 +1,46 @@
+@use "colors";
+@use "fonts";
+
+
+.menu {
+    background-image: colors.$menu-color;
+    display: flex;
+    justify-content: center;
+
+    &__list {
+        display: flex;
+        padding-left: 0;
+        list-style-type: none;
+    }
+
+    &__link {
+        text-decoration: none;
+        font-weight: 500;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        padding: 15px 15px;
+        border-right: 1px solid colors.$primary-color;
+        color: colors.$primary-color;
+        transition: .1s;
+        &:hover, &:active, &:focus {
+            background-image: colors.$menu-color-darken;
+        }       
+    }
+
+    &__fifth {
+        border-right: none;
+    }
+
+    &__button {
+        background-image: colors.$button-color;
+        text-decoration: none;
+        color: colors.$button-link-color;
+        font-weight: 500;
+        padding: 15px 15px;
+        transition: .1s;
+
+        &:hover, &:active, &:focus {
+            background-image: colors.$button-color-darken;
+            color: colors.$link-hover-color;
+        }
+    }
+}

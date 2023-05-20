@@ -1,0 +1,84 @@
+@use "colors";
+@use "fonts";
+
+.howto {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+
+    &__list {
+        background-image: colors.$button-color;
+        padding: 30px;
+        border-radius: 15px;
+        list-style-type: none;
+
+        & a {
+            font-weight: 500;
+        }
+    }
+
+    &__image {
+        display: none;
+        
+        @media screen and (min-width: 750px) {
+            max-width: 160px;
+            display: block;
+        }
+            
+    }
+}
+
+
+.tutorials {
+    &__button--spacer {
+        margin-bottom: 25px;
+    }
+
+    &__article {
+        margin-top: 20px;
+
+        @media screen and (min-width: 750px) {
+            margin-top: 40px;
+        }
+
+        & a {
+            font-weight: 500;
+        }
+    }
+}
+
+#howto-main1 {
+    &::before {
+        content: url(/images/letter.png);
+        display: inline-block;
+        margin-right: 10px;
+    }
+}
+
+#howto-main2 {
+    &::before {
+        content: url(/images/icon-form.png);
+        display: inline-block;
+        margin-right: 10px;
+    }
+}
+
+#howto-main3 {
+    &::before {
+        content: url(/images/youtube.png);
+        display: inline-block;
+        margin-right: 10px;
+    }
+}
+
+#howto1,
+#howto2,
+#howto3 {
+    &::before {
+        content: url(/images/question-small.png);
+        display: inline-block;
+        height: 15px;
+        width: 15px;
+        margin-right: 10px;
+    }
+}

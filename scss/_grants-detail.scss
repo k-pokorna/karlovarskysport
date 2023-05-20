@@ -1,0 +1,43 @@
+@use "colors";
+@use "fonts";
+
+
+.aside {
+    flex-basis: 100%;
+    background-image: colors.$button-color;
+    padding: 32.55px 40px 35px 40px;
+    min-height: 200px;
+    order: 1;
+    text-align: center;
+    font-weight: 500;
+
+    @media screen and (min-width: 730px) {
+        flex-basis: 29%;
+        order: 0;
+        padding: 43.55px 40px 35px 40px;
+    }
+        
+    &__form-list {
+        padding: 0;
+        list-style-type: none;
+    }
+
+    &__form a {
+        display: block;
+    }
+}
+
+.grant-content {
+    flex-basis: 100%;
+    padding: 10px 40px 0 40px;
+
+    @media screen and (min-width: 730px) {
+        flex-basis: 56%;
+        padding: 10px 45px 45px 40px;
+    }
+
+    & h1 {
+        padding-left: 0;
+    }
+}
+

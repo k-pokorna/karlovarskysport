@@ -1,0 +1,33 @@
+@use "colors";
+@use "fonts";
+
+
+.program-data {
+
+    display: flex;
+    justify-content: space-between;
+
+    &__icon {
+        width: 45px;
+    }
+
+    &__item {
+      flex-basis: 45%;
+    }
+
+    &__individual {
+      flex-basis: 100%;
+    }
+
+    &__text h4 {
+      margin-top: 5px;
+    }
+}
+
+
+
+
+  
+  
+  
+  

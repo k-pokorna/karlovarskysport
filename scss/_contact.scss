@@ -1,0 +1,61 @@
+@use "colors";
+@use "fonts";
+
+.contact-heading {
+    text-align: center;
+}
+
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 40px;
+
+        @media screen and (min-width: 748px) {
+            gap: 60px;
+        }
+    
+
+    &__card {
+        border-radius: 15px;
+        flex-basis: 60%;
+        background-image: colors.$button-color;
+        font-weight: 500;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        padding: 20px;
+        text-align: center;
+
+        @media screen and (min-width: 748px) {
+            flex-basis: 42%;
+            text-align: start;
+        }
+
+        & ul {
+            padding-left: 0;
+            list-style-type: none;
+
+            @media screen and (min-width: 748px) {
+                list-style-type: disc;
+                padding-left: 30px;
+            }
+        }      
+    }
+
+    &__icon {
+        max-width: 60px;
+        display: block;
+        margin: 0 auto 20px auto;
+        border: 1px solid #91601f;
+        border-radius: 50%;
+    }
+
+    &__name {
+        font-weight: 600;
+        text-align: center;
+
+        &--light {
+            font-weight: 500;
+            text-align: center;
+        }
+    }
+}

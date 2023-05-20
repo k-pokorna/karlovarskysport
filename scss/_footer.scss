@@ -1,0 +1,64 @@
+@use "colors";
+@use "fonts";
+@use "button";
+
+
+.footer {
+    background-color: colors.$brand-color1;
+    color: colors.$primary-color;
+
+    &__flex {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    &__table-data {
+        padding-left: 15px;
+    }
+
+    &__links {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    &__links a {
+        color: colors.$primary-color;
+        text-decoration: none;
+        &:hover {
+            color: colors.$link-dark-background;
+        }
+    }
+
+    &__logo {
+        max-width: 50px;
+        background-color: colors.$primary-color;
+        border-radius: 50%;
+        display: none;
+
+        @media screen and (min-width: 550px) {
+            display: inline;
+        }
+    }
+}
+
+.footer-padding {
+	padding: 20px 30px;
+
+	@media screen and (min-width: 550px) {
+		padding: 23px 45px;
+	}
+
+	@media screen and (min-width: 600px) {
+		padding: 23px 60px;
+	}
+
+	@media screen and (min-width: 660px) {
+		padding: 23px 80px;
+	}
+
+	@media screen and (min-width: 1200px) {
+		padding: 23px 140px;
+	}
+}

@@ -1,0 +1,132 @@
+@use "colors";
+@use "fonts";
+@use "button";
+
+@use "header";
+@use "menu-nav-copy";
+@use "index";
+@use "news";
+@use "grants";
+@use "grants-data";
+@use "grants-detail";
+@use "tutorials";
+@use "contact";
+@use "footer";
+
+
+/* intuitivnější box-sizing pro všechny prvky na stránce */
+html { 
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+*, ::before, ::after { box-sizing: inherit; }
+
+
+body {
+	margin: 0;
+	background-image: colors.$body-color;
+	font-family: fonts.$font;
+	background-color: colors.$text-color;
+	line-height: fonts.$line-height;
+	font-size: fonts.$font-size-small;
+	
+	@media screen and (min-width: 940px) {
+		font-size: fonts.$font-size-regular;
+	}
+}
+
+
+.wrapper {
+	max-width: 1000px;
+	margin: 0 auto;
+	background-color: colors.$primary-color;
+
+	&__grant-detail {
+		display: flex;
+		gap: 30px;
+		align-items: start;
+		flex-wrap: wrap;
+
+		@media screen and (min-width: 768px) {
+			flex-wrap: nowrap;
+		}
+	}
+}
+
+
+section:last-of-type {
+	padding-bottom: 27px;
+
+	@media screen and (min-width: 768px) {
+		padding-bottom: 48px;
+	}
+}
+
+
+img {
+	width: 100%;
+}
+
+
+a {
+	color: colors.$link-color;
+	text-decoration: none;
+	&:hover, :active, :focus {
+		color: colors.$link-hover-color;
+	}
+}
+
+
+.outer-padding {
+	padding: 20px 30px;
+
+	@media screen and (min-width: 550px) {
+		padding: 23px 45px;
+	}
+
+	@media screen and (min-width: 600px) {
+		padding: 23px 60px;
+	}
+
+	@media screen and (min-width: 660px) {
+		padding: 23px 80px;
+	}
+
+	@media screen and (min-width: 1200px) {
+		padding: 23px 140px;
+	}
+}
+
+
+h1 {
+	padding: 20px 0 0 30px;
+	margin-bottom: 0;
+
+	@media screen and (min-width: 550px) {
+		padding: 23px 0 0 45px;
+	}
+
+	@media screen and (min-width: 600px) {
+		padding: 23px 0 0 60px;
+	}
+
+	@media screen and (min-width: 660px) {
+		padding: 23px 0 0 80px;
+	}
+
+	@media screen and (min-width: 1200px) {
+		padding: 23px 0 0 140px;
+	}
+}
+
+
+h1 + p,
+h2 + p,
+h3 + p {
+	margin-top: 0;
+}
+
+
+p:first-of-type {
+	margin-top: 0;
+}

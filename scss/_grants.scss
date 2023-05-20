@@ -1,0 +1,91 @@
+@use "colors";
+@use "fonts";
+@use "button";
+
+
+.grants {
+
+    &__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-top: 30px;
+    }
+
+    &__item {
+        padding: 15px 30px;
+        margin-bottom: 25px;
+        flex-basis: 42%;
+
+        background-color: colors.$primary-color;
+        border-radius: 15px;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @media (max-width: 768px) {
+            flex-basis: 100%;
+        }
+    }
+
+    &__inner-part {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    &__deadline {
+        padding-top: 12px;
+        font-weight: 600;
+
+        &::before {
+            content: "";
+            display: inline-block;
+            height: 15px;
+            width: 15px;
+            border-radius: 50%;
+            background-color: colors.$grant-color-closed;
+            margin-right: 10px;
+        }
+    }
+
+    &__opened {
+        &::before {
+            content: "";
+            display: inline-block;
+            height: 15px;
+            width: 15px;
+            border-radius: 50%;
+            background-color: colors.$grant-color-opened;
+            margin-right: 10px;
+        }
+    }
+
+    &--coloured {
+        background-color: colors.$grants-background;
+    }
+
+    &__link {
+        background-image: colors.$button-color;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    &__icon {
+        margin: auto;
+        max-width: 110px;
+
+        & img {
+            height: 80px;
+        }
+    }
+}

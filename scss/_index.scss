@@ -1,0 +1,79 @@
+.tutorials {
+    &__image-block {
+        display: none;
+    }
+
+    &__button-wrap {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__button {
+        margin-bottom: 0;
+    }
+
+    @media screen and (min-width: 688px) {
+        &__wrap {
+            display: flex;
+            align-items: start;
+        }
+     
+        &__image-block {
+            order: 1;
+            display: flex;
+            justify-content: end;
+            flex-basis: 46%;
+    
+            & img {
+                max-width: 73.5%;
+            }
+        }
+    
+        &__text {
+            flex-basis: 70%;
+        }
+
+        &__button-wrap {
+            display: inline-block;
+        }
+    }   
+}
+
+
+.promotion {
+
+    &__image-block {
+        display: none;
+    }
+
+    &__button-wrap {
+        display: flex;
+        justify-content: center;
+    }
+
+    @media screen and (min-width: 688px) {
+        &__wrap {
+            display: flex;
+            align-items: start;
+        }
+     
+        &__image-block {
+            display: flex;
+            justify-content: end;
+            flex-basis: 48%;
+    
+            & img {
+                max-width: 77%;
+            }
+        }
+    
+        &__text {
+            order: -1;
+            flex-basis: 79%;
+        }
+
+        &__button-wrap {
+            display: inline-block;
+        }
+    }
+}
