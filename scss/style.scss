@@ -3,7 +3,7 @@
 @use "button";
 
 @use "header";
-@use "menu-nav-copy";
+@use "menu-nav";
 @use "index";
 @use "news";
 @use "grants";
@@ -72,7 +72,7 @@ a {
 	color: colors.$link-color;
 	text-decoration: none;
 	&:hover, :active, :focus {
-		color: colors.$link-hover-color;
+		color: colors.$link-dark-background;
 	}
 }
 

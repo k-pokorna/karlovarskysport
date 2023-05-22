@@ -4,43 +4,149 @@
 
 .menu {
     background-image: colors.$menu-color;
-    display: flex;
-    justify-content: center;
+    font-weight: 500;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    color: colors.$primary-color;
+    
+    @media screen and (min-width: 669px) {
+        display: flex;
+        justify-content: center; 
+    }
+
+    &__checkbox {
+        position: absolute;
+        left: -9999px;
+
+        &:checked ~ .menu__toggler {
+            border-bottom: 1px solid colors.$primary-color;
+        }
+
+        @media screen and (max-width: 668px) {
+            &:checked ~ .menu__list {
+                display: block;
+            }   
+        }
+    }
+
+    &__toggler {
+        cursor: pointer;
+        display: block;
+        font-size: 16px;
+        padding: 15px 0 15px 29px;
+        &:hover, &:active, &:focus {
+            background-image: colors.$menu-color-darken;
+            color: colors.$link-hover-color;
+        }
+
+        @media screen and (min-width: 669px) {
+            display: none;
+        }
+
+        @media screen and (min-width: 550px) {
+            padding: 15px 45px;
+        }
+    
+        @media screen and (min-width: 600px) {
+            padding: 15px 60px;
+        }
+    
+        @media screen and (min-width: 660px) {
+            padding: 15px 80px;
+        }
+    }
 
     &__list {
-        display: flex;
-        padding-left: 0;
-        list-style-type: none;
+        display: none;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        @media screen and (min-width: 669px) {
+            display: flex;
+        }
+    }
+
+    &__item {
+        border-bottom: 1px solid colors.$primary-color;
+
+        @media screen and (min-width: 668px) {
+            border-bottom: 0;
+            border-right: 1px solid colors.$primary-color;
+        }
     }
 
     &__link {
-        text-decoration: none;
-        font-weight: 500;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-        padding: 15px 15px;
-        border-right: 1px solid colors.$primary-color;
+        display: block;
+        padding: 13px 0 13px 30px;
         color: colors.$primary-color;
         transition: .1s;
+        
         &:hover, &:active, &:focus {
             background-image: colors.$menu-color-darken;
-        }       
+            // color: #4c19d7;
+        }
+
+        @media screen and (min-width: 550px) {
+            padding: 15px 0 15px 45px;
+        }
+
+        @media screen and (min-width: 600px) {
+            padding: 15px 0 15px 60px;
+        }
+
+        @media screen and (min-width: 660px) {
+            padding: 15px 0 15px 80px;
+        }
+
+        @media screen and (min-width: 669px) {
+            padding-left: 17px;
+            padding-right: 17px;       
+        }
     }
 
-    &__fifth {
-        border-right: none;
+    &__no-border {
+        border-right: 0;
+        @media screen and (min-width: 669px) {
+            border-right: 0;      
+        }
     }
+
 
     &__button {
-        background-image: colors.$button-color;
-        text-decoration: none;
-        color: colors.$button-link-color;
-        font-weight: 500;
-        padding: 15px 15px;
+        display: block;
+        padding: 13px 0 13px 30px;
         transition: .1s;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.0);
+        background-image: colors.$button-color;
+        color: colors.$button-link-color;
 
         &:hover, &:active, &:focus {
             background-image: colors.$button-color-darken;
             color: colors.$link-hover-color;
         }
+
+        &::before {
+            content: url(/images/arrow-right.png);
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        @media screen and (min-width: 550px) {
+            padding: 15px 0 15px 45px;
+        }
+
+        @media screen and (min-width: 600px) {
+            padding: 15px 0 15px 60px;
+        }
+
+        @media screen and (min-width: 660px) {
+            padding: 15px 0 15px 80px;
+        }
+
+        @media screen and (min-width: 669px) {
+            padding-left: 17px;
+            padding-right: 17px;       
+        }
     }
 }
+
