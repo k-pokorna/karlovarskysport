@@ -614,6 +614,7 @@
 .footer {
   background-color: #264598;
   color: #ffffff;
+  font-size: 14px;
 }
 .footer__flex {
   display: flex;

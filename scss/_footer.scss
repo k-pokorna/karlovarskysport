@@ -6,6 +6,7 @@
 .footer {
     background-color: colors.$brand-color1;
     color: colors.$primary-color;
+    font-size: fonts.$font-size-footer;
 
     &__flex {
         display: flex;
